@@ -51,8 +51,7 @@ class DataExporter:
             return filepath
         except Exception as e:
             logger.error(f"Failed to export to JSON: {e}")
-            raise
-    
+            raise 
     @staticmethod
     def import_from_json(filepath: Path) -> List[Task]:
         """
@@ -78,8 +77,7 @@ class DataExporter:
             return tasks
         except Exception as e:
             logger.error(f"Failed to import from JSON: {e}")
-            raise
-    
+            raise 
     @staticmethod
     def export_to_csv(tasks: List[Task], filename: str = None) -> Path:
         """
@@ -111,7 +109,7 @@ class DataExporter:
             return filepath
         except Exception as e:
             logger.error(f"Failed to export to CSV: {e}")
-            raise
+            raise 
     
     @staticmethod
     def import_from_csv(filepath: Path) -> List[Task]:
@@ -142,8 +140,7 @@ class DataExporter:
             return tasks
         except Exception as e:
             logger.error(f"Failed to import from CSV: {e}")
-            raise
-    
+            raise 
     @staticmethod
     def create_backup(db_path: Path) -> Path:
         """
@@ -165,7 +162,7 @@ class DataExporter:
             return backup_path
         except Exception as e:
             logger.error(f"Failed to create backup: {e}")
-            raise
+            raise 
     
     @staticmethod
     def restore_backup(backup_path: Path, db_path: Path):
@@ -181,4 +178,4 @@ class DataExporter:
             logger.info(f"Restored database from {backup_path}")
         except Exception as e:
             logger.error(f"Failed to restore backup: {e}")
-            raise
+            raise 
